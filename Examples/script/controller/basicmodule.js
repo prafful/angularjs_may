@@ -9,6 +9,15 @@ var localapp = angular.module("myapp")
             $scope.team = ['praffuldaga','mohan',"partha"]
             $scope.profession = ['programmer', 'singer', 'trainer']
 
+            $scope.fcolor = "red"
+            $scope.bcolor = "pink"
+
+            $scope.myStyle={
+                            "background-color": $scope.bcolor, 
+                            "color": $scope.fcolor,
+                            "padding": "25px"
+                            }
+
             $scope.addToTeam = function(){
                 console.log("addtoteam function called")
                 //$scope.team.push($scope.fname)

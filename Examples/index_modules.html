@@ -1,41 +1,53 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
-   
+
     <title>AngularJS Modules</title>
-   
-   
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.js"></script>
 </head>
+
 <body>
     <div ng-app="myapp" ng-controller="mycontroller">
         <!--This is my view-->
         <p>First Name:</p>
-        <input type="text" ng-model="fname" >
+        <input type="text" ng-model="fname">
         <p>Last Name:</p>
-        <input type="text" ng-model="lname" >
-        <p>Hello, {{ fname +  " " + lname }}    
-            <br><button ng-click="addToTeam()">Add To Team</button>
-         <p>{{team}}</p>   
-         <p>Example for ng-repeat directive:</p>
-         Team: 
-         <br>
-         <ul>
-             <li ng-repeat="n in team; track by $index" ng-click="deleteLi($index)">{{$index}}. {{n}}  </li>
-        </ul>
-        <p>Example for ng-options directive:</p>
-        Profession:
-         <select ng-model="prof" ng-options="item for item in profession">
-             
-         </select>
-        <!--This is end of my angular view-->
+        <input type="text" ng-model="lname">
+        <p>Hello, {{ fname + " " + lname }}
+            <br>
+            <button ng-click="addToTeam()">Add To Team</button>
+            <p>{{team}}</p>
+            <p>Example for ng-repeat directive:</p>
+            Team:
+            <br>
+            <ul>
+                <li ng-repeat="n in team; track by $index" ng-click="deleteLi($index)">{{$index}}. {{n}} </li>
+            </ul>
+            Hide: <input type="checkbox" ng-model="hideme" ng-init="hideme=true">{{hideme}}
+            <div ng-if="hideme">
+                <p>Example for ng-options directive:</p>
+                Profession:
+                <select ng-model="prof" ng-options="item for item in profession">
+
+                </select>
+            </div>
+            Front Color:<input type="text" ng-model="fcolor">{{fcolor}}<br>
+            Back Color:<input type="text" ng-model="bcolor">{{bcolor}}
+            <div ng-style="myStyle">
+                <h1>Prafful Daga</h1>
+            </div>
+            <!--This is end of my angular view-->
     </div>
 
-  
+
 
 
     <script src="script/controller/rootmodule.js"></script>
     <script src="script/controller/basicmodule.js"></script>
-   </body>
+</body>
+
 </html>

@@ -8,7 +8,7 @@
 </head>
 <body >
     <h1>Hello Angular JS</h1>
-    <div ng-app="" ng-init="price=50; quantity=10; fname='Prafful'; lname='Daga';cell={'company':'nokia', 'ram':'4 GB'} ">
+    <div ng-app="" ng-init="price=50; quantity=10; fname='Prafful'; lname='Daga';cell={'company':'nokia', 'ram':4} ">
         <p>First Name:</p>
         <input type="text" ng-model="fname" style="color:{{yourname}}">
         <p>Last Name:</p>
@@ -17,7 +17,9 @@
         <p>Accessing value of template variable using ng-bind:</p>
         <div ng-bind="fname"></div><div ng-bind="lname"></div>
         <p>Accessing JSON Object</p>
-        {{cell.company}}, {{cell.ram}}
+        {{cell.company | uppercase }}, {{cell.ram | currency:'INR'}}
+
+        <!--  filter, orderBy     -->
 
 
     </div>
