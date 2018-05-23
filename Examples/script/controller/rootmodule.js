@@ -1,0 +1,1 @@
+var localapp = angular.module("myapp",[])

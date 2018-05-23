@@ -15,22 +15,27 @@
         <input type="text" ng-model="fname" >
         <p>Last Name:</p>
         <input type="text" ng-model="lname" >
-        <p>Hello, {{ fname +  " " + lname }}
-
+        <p>Hello, {{ fname +  " " + lname }}    
+            <br><button ng-click="addToTeam()">Add To Team</button>
+         <p>{{team}}</p>   
+         <p>Example for ng-repeat directive:</p>
+         Team: 
+         <br>
+         <ul>
+             <li ng-repeat="n in team; track by $index" ng-click="deleteLi($index)">{{$index}}. {{n}}  </li>
+        </ul>
+        <p>Example for ng-options directive:</p>
+        Profession:
+         <select ng-model="prof" ng-options="item for item in profession">
+             
+         </select>
         <!--This is end of my angular view-->
     </div>
 
+  
 
 
-    <script>
-        var localapp = angular.module("myapp",[])
-        localapp.controller("mycontroller", implementController)
-        
-        //this is implementation of controller
-        function implementController($scope){
-            $scope.fname = "Partha"
-            $scope.lname= "Reddy"
-        }
-    </script>
-</body>
+    <script src="script/controller/rootmodule.js"></script>
+    <script src="script/controller/basicmodule.js"></script>
+   </body>
 </html>
