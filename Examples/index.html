@@ -8,7 +8,7 @@
 </head>
 <body >
     <h1>Hello Angular JS</h1>
-    <div ng-app="" ng-init="price=50; quantity=10; fname='Prafful'; lname='Daga';cell={'company':'nokia', 'ram':4} ">
+    <div ng-app="myapp" ng-controller="serviceController" ng-init="price=50; quantity=10; fname='Prafful'; lname='Daga';cell={'company':'nokia', 'ram':4} ">
         <p>First Name:</p>
         <input type="text" ng-model="fname" style="color:{{yourname}}">
         <p>Last Name:</p>
@@ -17,10 +17,32 @@
         <p>Accessing value of template variable using ng-bind:</p>
         <div ng-bind="fname"></div><div ng-bind="lname"></div>
         <p>Accessing JSON Object</p>
-        {{cell.company | uppercase }}, {{cell.ram | currency:'INR'}}
+        {{cell.company | uppercase }}, {{cell.ram | currency:'INR'}}<br>
+        <p>Number:</p>
+        <input type="number" ng-model="num1"">
+        <button ng-click="square()">Square</button> {{result}} <br><br>
+        <button ng-click="getRemoteData()">Get Remote Data</button><br>
+        {{jsondata}} <br>
+        <table border="1">
+                <tr>
+                    <th >ID</th>
+                    <th >Name</th>
+                    <th>Email</th>
+                </tr>
+                <tr ng-repeat="d in jsondata">
+                    <td>{{d.id  | uppercase}} </td>
+                    <td> {{d.name}}</td>
+                    <td> {{d.email }}</td>
+                </tr>
+    
+    
+            </table>
+
 
         <!--  filter, orderBy     -->
-
+        <script src="script/controller/rootmodule.js"></script>
+        <script src="script/controller/servicecontroller.js"></script>
+        <script src="script/services/service.js"></script>
 
     </div>
 

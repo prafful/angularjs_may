@@ -10,21 +10,28 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.js"></script>
 </head>
 
-<body>
-    <div ng-app="myapp" >
+<body ng-app="myapp">
+    <div  >
         <!--This is my view-->
             
-            1.<div first-name></div>
-            2.<div class=first-name></div>
-            3.<first-name></first-name>
-        <!--This is end of my angular view-->
+           <!-- 1.<div first-name></div>
+            2.<div class=first-name></div>-->
+            3.<first-name fname="prafful"></first-name>
+
+            4.<full-name fname="prafful"></full-name>
+        
+            <!--This is end of my angular view-->
+
+       
     </div>
 
 
 
 
     <script src="script/controller/rootmodule.js"></script>
-    <script src="script/controller/customdirective.js"></script>
+    <!-- <script src="script/controller/rootcontroller.js"></script> -->
+    <script src="name/customfullname.js"></script>
+    <script src="fullname/customname.js"></script>
 </body>
 
 </html>
