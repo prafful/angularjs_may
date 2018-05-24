@@ -4,9 +4,12 @@ localapp.controller("serviceController", function($scope, MathsService){
     //i want to inject service inside this controller. This
     //controller will take help of service to do calculate something
 
+    $scope.showMe = true
+    $scope.badconnection = false
+
     $scope.square = function(){
         console.log(" function called")
-        console.log(MathsService.testVariable)
+        console.log(MathsService.name.age)
         $scope.result = MathsService.squareMe($scope.num1)
     }
 
@@ -16,7 +19,14 @@ localapp.controller("serviceController", function($scope, MathsService){
         console.log("From HTTP service call:")
         $scope.remoteData.then(function(res){
             console.log(res)
-            $scope.jsondata = res;
+            if(res === 404){
+                $scope.showMe = false
+                $scope.badconnection = true
+            }
+            else{
+                $scope.jsondata = res
+            }
+            
         })
     }
 })

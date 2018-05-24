@@ -22,7 +22,13 @@
         <input type="number" ng-model="num1"">
         <button ng-click="square()">Square</button> {{result}} <br><br>
         <button ng-click="getRemoteData()">Get Remote Data</button><br>
-        {{jsondata}} <br>
+        <div ng-if="showMe">
+            {{jsondata}}
+        </div>
+        <div ng-if="badconnection">
+            Pl. check the conenction!!!!
+        </div>
+        <br>
         <table border="1">
                 <tr>
                     <th >ID</th>

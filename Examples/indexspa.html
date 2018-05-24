@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>Angular JS SPA Routes</title>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.10/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+</head>
+<body ng-app="myapp">
+    <h1>SPA in Angular</h1>
+        <ul>
+            <li><a ui-sref="home">home</a></li>
+            <li><a ui-sref="about">about</a></li>
+        </ul>
+
+    <div ui-view></div>
+    <script src="script/config/routes.js"></script>
+</body>
+</html>
